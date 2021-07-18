@@ -1,0 +1,113 @@
+@media(max-width:768px){
+ 
+  .wrapper{
+    overflow: hidden;
+    
+    header{
+      position: static;
+      margin-left: 20px;
+      nav{
+        display: none;
+      }
+    }
+    .mainVisual{
+      height: 360px;
+     
+      h1{
+        height: 30px;
+        font-size: 50px;
+      }
+      span{
+        font-size: 30px;
+      }
+
+    }
+    .container{
+      flex-direction: column;
+      width: 95%;
+
+      .flower{
+        margin-top: 30px;
+        width: 88%;
+        height: 400px;
+        object-fit: contain;
+      }
+    }
+  }
+
+  // menu
+  .menu-wrapper{
+   
+    header{
+      position: static;
+      margin-left: 20px;
+      nav{
+        display: none;
+      }
+    }
+    .top{
+
+      h2{
+        height: 0px;
+        margin-top: -50px;
+      }
+    }
+    
+    .picture img{
+      width: 300px;
+    }
+  }
+
+  // access
+  .access-wrapper{
+    
+    header{
+      position: static;
+      margin-left: 20px;
+     
+      nav{
+        display: none;
+      }
+    }
+    .top{
+      h2{
+        height: 0;
+        margin-top: -50px;
+      }
+    }
+    .access-container{
+      padding: 70px 15px;
+  }
+  }
+
+  // recruit
+
+  .recruit-wrapper{
+    header{
+      position: static;
+      margin-left: 20px;
+     
+      nav{
+        display: none;
+      }
+    }
+    .top{
+      h2{
+        height: 0;
+        margin-top: -50px;
+      }
+    }
+    .staff-container{
+      margin: 60px 10px 0;
+    }
+  }
+  }
+
+  @media(min-width:768px){
+     .hamburger{
+       display: none;
+     }
+     .menu-btn{
+       display: none;
+     }
+  }

@@ -1,0 +1,480 @@
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body {
+    line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000;
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;  
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+*,*::before,*::after{
+  box-sizing: border-box;
+}
+// ハンバーガーメニュー
+.hamburger{
+     list-style: none;
+     font-family: EB Garamond;
+     background-color: #C32D4D;
+     text-align: center;
+     visibility: hidden;
+     height: 0;
+     transition: 0.5s;
+     opacity: 0;
+     li{
+      font-size: 36px;
+      padding-top: 20px;
+      margin-bottom: 20px;
+       a{
+        
+         text-decoration: none;
+         color: white;
+         &:hover{
+           opacity: 0.5;
+         }
+        }
+     }
+}
+#check{
+  display: none;
+}
+#check:checked~.hamburger{
+  visibility: visible;
+  transition: 0.5s;
+  height: 300px;
+  opacity: 1;
+}
+.menu-btn{
+  position: relative;
+  top: 30px;
+  left: 290px;
+}
+.menu-btn span, .menu-btn span::before,.menu-btn span::after{
+  content: ' ';
+  display: block;
+  height: 3px;
+  width: 20px;
+  border-radius: 3px;background-color: black;
+  position: absolute;
+ 
+}
+.menu-btn span::before{
+  bottom: 8px;
+}
+.menu-btn span::after{
+  top: 8px;
+}
+#check:checked~.menu-btn span{
+  background-color: #C32D4D;
+}
+#check:checked~.menu-btn span::before{
+  bottom: 0;
+  transform: rotate(45deg);
+}
+#check:checked~.menu-btn span::after{
+  top: 0;
+  transform: rotate(-45deg);
+}
+
+// ハンバーガーメニュー
+
+
+.mainVisual{
+ 
+  height:680px ;
+  width: 100%;
+  background-image: url(img/bg-header_pc.jpg);
+  background-size: cover;      
+  h1{
+    display: flex;
+    align-items:flex-end;
+    justify-content: center;
+    height: 360px;
+    text-align: center;
+    font-size: 90px;
+    font-family: EB Garamond;
+    color: #C32D4D;
+    font-weight: 500;
+  }
+  span{
+    font-size: 65px;
+    margin: 0 15px;
+  }
+p{
+  display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  font-size: 18px;
+  font-family: Noto Sans JP Regular;
+}
+}
+
+header{
+  height: 200px; 
+  display: flex;
+  justify-content: space-between;
+  right: 0;
+  left: 30px;
+  padding-top: 30px;
+  position: fixed;
+  img{
+    width: 170px;
+  }
+  nav{
+    display: flex;
+    list-style: none;
+    .home{
+      color: #C32D4D;
+    }
+    li{
+      margin-right: 35px;
+      font-family: EB Garamond;
+      font-size: 20px;
+      a{
+        text-decoration: none;
+        color: #000;
+        &:hover{
+          opacity: 0.5;
+        }
+      }
+    }
+  }
+}
+
+.container{
+  margin: 70px 9%;
+  height: auto;
+  display: flex;
+  line-height: 1.8;
+.text-wrapper{
+  margin-right: 50px;
+  .text{
+    p{
+      margin-bottom: 20px;
+      font-size: 16px;
+    }
+    a{
+      font-size: 16px;
+      color: #C32D4D;
+      margin-right: 20px;
+      &:hover{
+        text-decoration: none;
+      }
+    }
+  }
+}
+  .woman{
+    margin-top: 35px;
+    p{
+      font-size: 15px;
+    }
+    a{
+      color: #C32D4D;
+      &:hover{
+        text-decoration: none;
+      }
+    }
+    img{
+      width: 110px;
+      float: left;
+      border-radius: 50%;
+      margin-right: 20px;
+    }
+  }
+  .flower{
+    width: 45%;
+  }
+}
+
+footer{
+  height: 170px;
+  background-color:#C32D4D ;
+  text-align: center;
+  p{
+    font-size: 12px;
+  }
+  nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    font-family: EB Garamond;
+    font-size: 20px;
+    li{
+      margin: 50px 15px;
+    }
+   a{
+     
+     text-decoration: none;
+     &:hover{
+       opacity: 0.7;
+     }
+   }
+  }
+  a{
+    color: white;
+    text-decoration: none;
+    &:hover{
+      opacity: 0.7;
+    }
+  }
+}
+
+
+//menu.html//@at-root
+
+.menu-wrapper{
+  .top{
+    height: 200px;
+  background-image: url(img/bg-page-header_pc.jpg);
+  background-size: cover;    
+  .menu{
+    color: #C32D4D;
+  } 
+  h2{
+    display: flex;
+    align-items:flex-end;
+    justify-content: center;
+    height: 120px;
+    text-align: center;
+    font-size: 48px;
+    font-family: EB Garamond;
+    color: #C32D4D;
+    font-weight: 500;
+  }
+  p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  font-size: 14px;
+  line-height: 1.8;
+  font-family: Noto Sans JP Regular;
+  }
+  }
+
+  .menu-visual{ 
+    padding: 70px 160px 20px;
+    
+ .menu-picture{
+   display: flex;
+   justify-content: space-around;
+   flex-wrap: wrap;
+   .picture{
+    
+    h3{
+      color: #BA4862;
+      font-weight: 500;
+      margin: 15px 0;
+    }
+    p{
+      margin-bottom: 50px;
+    }
+   }
+ }
+}
+}
+
+//access.html//
+.access-wrapper{
+  .top{
+    height: 200px;
+  background-image: url(img/bg-page-header_pc.jpg);
+  background-size: cover;    
+  .access{
+    color: #C32D4D;
+  } 
+  h2{
+    display: flex;
+    align-items:flex-end;
+    justify-content: center;
+    height: 120px;
+    text-align: center;
+    font-size: 48px;
+    font-family: EB Garamond;
+    color: #C32D4D;
+    font-weight: 500;
+  }
+  p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  font-size: 14px;
+  line-height: 1.8;
+  font-family: Noto Sans JP Regular;
+  }
+  }
+  .access-container{
+    padding: 70px 165px;
+    line-height: 1.8;
+    h3{
+        font-weight: 500;
+        margin-bottom: 40px;
+    }
+    p{
+      margin-bottom: 25px;
+    }
+    iframe{
+      width: 100%;
+    }
+  }
+}
+
+//recruit.html//@at-root
+
+.recruit-wrapper{
+  .top{
+    height: 200px;
+  background-image: url(img/bg-page-header_pc.jpg);
+  background-size: cover;    
+  .recruit{
+    color: #C32D4D;
+  } 
+  h2{
+    display: flex;
+    align-items:flex-end;
+    justify-content: center;
+    height: 120px;
+    text-align: center;
+    font-size: 48px;
+    font-family: EB Garamond;
+    color: #C32D4D;
+    font-weight: 500;
+  }
+  p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  font-size: 14px;
+  line-height: 1.8;
+  font-family: Noto Sans JP Regular;
+  }
+}
+h3{
+  text-align: center;
+  font-weight: 500;
+  margin-top: 80px;
+  font-size: 24px;
+}
+.staff-container{
+  margin: 60px 165px 70px;
+  table{
+    width: 100%;
+    font-size: 15px;
+    font-family: "EB Garamond";
+    .indent{
+      margin-left: 10px;
+    }
+  tr{
+    border-bottom: 1px solid #E2E2E2;
+    .phone{
+      list-style: none;
+    }
+    li{
+      padding-top: 15px;
+      
+    }
+    th{
+      font-weight: 500;
+      text-align: left;
+      padding: 30px 0;
+      width: 27%;
+    }
+    td{
+      
+      text-align: left;
+     
+      padding: 30px 0;
+      margin-right: 0;
+    }
+  }
+}
+}
+}
